@@ -1,0 +1,39 @@
+name: iso_jowo
+description: Aplikasi Pelestarian Budaya Jawa - Proyek PENS 2026.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Tambahkan library pendukung di sini
+  cupertino_icons: ^1.0.2
+  http: ^1.1.0      
+  audioplayers: ^5.2.1  # Penting untuk koneksi ke API Laravel nantinya
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  # 1. Registrasi Gambar (Sesuaikan nama file dengan yang ada di folder assets/images)
+  assets:
+    - assets/images/
+
+    - assets/sound/
+    # Jika ada pola batik atau banner terpisah, tambahkan di sini:
+    # - assets/images/banner_wilujeng.png
+
+  # 2. Registrasi Font (Pastikan file .ttf sudah ada di folder assets/fonts)
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
